@@ -1,0 +1,7 @@
+h1. ioBridge JavaScript Widgets
+
+Support for ioBridge is available on "ioBridge Connect":http://connect.iobridge.com
+
+h1. widgetGetValue
+
+Public Temperature Widget ID: 7pQsp9xXu3Xd
