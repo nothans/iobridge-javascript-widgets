@@ -1,6 +1,6 @@
 h1. ioBridge JavaScript Widgets
 
-Support for ioBridge is available on "ioBridge Connect":http://connect.iobridge.com
+Documentation for the JavaScript Widget Control API is available on "ioBridge Connect":http://connect.iobridge.com/api/javascript-widget-control-api/
 
 h1. widgetGetValue
 
