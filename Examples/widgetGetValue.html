@@ -10,7 +10,7 @@
             
             function startCustomCode() {
                 
-                // User widgetGetValue to get the value of the widget
+                // Use 'widgetGetValue' to get the value of the widget
                 var widget_value = widgetGetValue('7pQsp9xXu3Xd'); 
                 
                 // Update the div with the widget's value
@@ -20,11 +20,11 @@
                 
         </script>        
         
-	</head>
-	<body>
+    </head>
+    <body>
 	    
-	    <!-- Embed and hide a value widget such as a temperature widget -->
-	    <div id="ioWidgets" style="display:none;">
+        <!-- Embed and hide a value widget such as a temperature widget -->
+        <div id="ioWidgets" style="display:none;">
  
             <script type="text/javascript">
                 document.write(unescape("%3Cscript src='" + "http://www.iobridge.com/widgets/io.js?7pQsp9xXu3Xd' type='text/javascript'%3E%3C/script%3E"));
@@ -33,19 +33,17 @@
         </div>
         
         <!-- Identify a div to update with the widget value -->
-	    <div id="widget_value_display" style="font-size:22px;">Loading widget value...</div>
+        <div id="widget_value_display" style="font-size:22px;">Loading widget value...</div>
 	    
 	    <!-- Start your custom code after the document is ready -->
 	    <script type="text/javascript">
 	        	            
-	        jQuery(document).ready(function() {
-	            
+            jQuery(document).ready(function() {	            
 	            setTimeout(startCustomCode, 1000);                                             
-
             });
   
-        </script>
+    </script>
         
-	</body>
+    </body>
 </html>
             
