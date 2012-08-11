@@ -13,8 +13,8 @@
                 var state_text;
                 
                 // Use 'widgetGetState' to get the current state of a switch widget
-                var state = widgetSetState('qEYhbIn48wWt', 0); 
-                
+                var state = widgetGetState('qEYhbIn48wWt'); 
+
                 // Update the div with the widget's state
                 if (state == 1) {state_text = 'Switch is On';}
                 else {state_text = 'Switch is Off'}
@@ -23,12 +23,12 @@
                 
             }
             
-            function controlSwitch(widgetID, state) {
+            function controlSwitch(widgetID, setState) {
                 
                 var state_text;
                 
                 // Use 'widgetSetState' to set the state of a switch widget
-                widgetSetState(widgetID, state); 
+                var state = widgetSetState(widgetID, setState); 
                 
                 // Update the div with the widget's state
                 if (state == 1) {state_text = 'Switch is On';}
@@ -46,7 +46,7 @@
     <body>
 	    
         <!-- Embed and hide a switch widget such as a digital output control widget -->
-        <div id="ioWidgets" style="display:none;">
+        <div id="ioWidgets" style="">
  
             <script type="text/javascript">
                 document.write(unescape("%3Cscript src='" + "http://www.iobridge.com/widgets/io.js?qEYhbIn48wWt' type='text/javascript'%3E%3C/script%3E"));
