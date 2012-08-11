@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ioBridge JavaScript Widgets Examples: widgetSetState</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        
+        <script type="text/javascript">
+            
+            function startCustomCode() {
+                
+                var state_text;
+                
+                // Use 'widgetGetState' to get the current state of a switch widget
+                var state = widgetSetState('qEYhbIn48wWt', 0); 
+                
+                // Update the div with the widget's state
+                if (state == 1) {state_text = 'Switch is On';}
+                else {state_text = 'Switch is Off'}
+                    
+                jQuery('#widget_state').html(state_text); 
+                
+            }
+            
+            function controlSwitch(widgetID, state) {
+                
+                var state_text;
+                
+                // Use 'widgetSetState' to set the state of a switch widget
+                widgetSetState(widgetID, state); 
+                
+                // Update the div with the widget's state
+                if (state == 1) {state_text = 'Switch is On';}
+                else {state_text = 'Switch is Off'}
+                    
+                jQuery('#widget_state').html(state_text); 
+                
+                return false;
+                
+            }
+                
+        </script>        
+        
+    </head>
+    <body>
+	    
+        <!-- Embed and hide a switch widget such as a digital output control widget -->
+        <div id="ioWidgets" style="display:none;">
+ 
+            <script type="text/javascript">
+                document.write(unescape("%3Cscript src='" + "http://www.iobridge.com/widgets/io.js?qEYhbIn48wWt' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+ 
+        </div>
+        
+        <h1>Switch State</h1>
+        
+        <!-- Identify a div to update with widget state -->
+        <div id="widget_state" style="font-size:22px;">
+            Loading switch state...
+        </div>
+        
+        <h1>Switch Controls</h1>
+        
+        <div id="widget_switch" style="font-size:22px;">
+            <span onclick="controlSwitch('qEYhbIn48wWt', 0); return false;">Turn Off</span> | <span onclick="controlSwitch('qEYhbIn48wWt', 1); return false;">Turn On</span>   
+        </div>
+	    
+        <!-- Start your custom code after the document is ready -->
+        <script type="text/javascript">    	            
+            jQuery(document).ready(function() {	            
+                setTimeout(startCustomCode, 1000);                                             
+            });  
+        </script>
+
+    </body>
+</html>
+            

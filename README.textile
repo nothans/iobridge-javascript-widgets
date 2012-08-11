@@ -5,3 +5,7 @@ Support for ioBridge is available on "ioBridge Connect":http://connect.iobridge.
 h1. widgetGetValue
 
 Public Temperature Widget ID: 7pQsp9xXu3Xd
+
+h1. widgetSetState
+
+Public Switch Widget ID: qEYhbIn48wWt
